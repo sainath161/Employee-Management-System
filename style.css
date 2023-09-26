@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 20px;
+    margin: 2%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+table {
+    align-self: start;
+    border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: center;
+}
+
+.btn{
+    background: tomato;
+    color : white !important;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: red;
+}
+
+.heading{
+    font-size: xx-large;
+    text-align: center;
+    background-image: linear-gradient(to right, orange, green);
+    color: aliceblue;
+    padding: 20px;
+    font-size: 36px;
+}
