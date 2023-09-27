@@ -25,7 +25,7 @@ let isEditing = false; // Added variable for tracking edit mode
 
 // Function to change the form's submit button text
 function setSubmitButtonText() {
-    const submitButton = document.getElementById("submit-button");
+    const submitButton = document.querySelector("#form button");
     if (isEditing) {
         submitButton.textContent = "Update Employee";
     } else {
@@ -56,8 +56,8 @@ function addEmployee(employee) {
         <td>${employee.company}</td>
         <td>${employee.designation}</td>
         <td>
-            <button class="btn" class="fas fa-trash-alt" onclick="deleteEmployee(this)" data-empid="${employee.empId}">Delete</button>
-            <button class="btn" onclick="editEmployee(this)" data-empid="${employee.empId}">Edit</button>
+        <button class="btn" onclick="deleteEmployee(this)" data-empid="${employee.empId}">Delete</button>
+        <button class="btn" onclick="editEmployee(this)" data-empid="${employee.empId}">Edit</button>
         </td>
     `;
     tbody.appendChild(tr);
