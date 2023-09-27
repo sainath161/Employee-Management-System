@@ -12,11 +12,13 @@
     <h1 class="heading">Employee Management System</h1>
     <div id="root">
         <form id="form">
+            <input type="file" accept="image/*" id="imageInput" name="image" required /> <!-- Added file input for image -->
             <input type="text" placeholder="Employee Name" name="name" required />
             <input type="email" placeholder="Email" name="email" required />
             <input type="text" placeholder="Employee ID" name="empId" required />
             <input type="text" placeholder="Company" name="company" required />
             <select name="designation" required>
+                <option value="" disabled selected>Select Designation</option>
                 <option value="SDE">SDE</option>
                 <option value="QA">QA</option>
                 <option value="TL">TL</option>
@@ -25,9 +27,11 @@
 
             <button>Add Employee</button>
         </form>
+        <div class="table-container">
         <table>
             <thead>
                 <tr>
+                    <th>Serial No.</th>
                     <th>Employee Name</th>
                     <th>Email</th>
                     <th>Employee ID</th>
@@ -38,6 +42,7 @@
             </thead>
             <tbody id="tbody"></tbody>
         </table>
+    </div>
     </div>
     <script src="./script.js"></script>
 </body>
